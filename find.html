@@ -1,0 +1,58 @@
+
+<!DOCTYPE html "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Find Books</title>
+    <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <style>
+      #container{
+        width: 50%;
+        border: 1px black solid;
+      }
+      h3{
+        text-align: center;
+      }
+      form{
+        width: 100%;
+        padding: 10px;
+      }
+      .textInput{
+        width: 50%;
+      }
+      hr{
+        width: 90%;
+        padding: 0;
+      }
+      #bookList{
+        width: 60%;
+        overflow-x: hidden;
+        text-align: center;
+      }
+    </style> 
+ </head>
+  <body>
+    <div id="container">
+        <h3>Find Books</h3>
+        <hr>
+        <form action="show.html">
+            <label for="bookSearch">Search All:</label>
+            <input type="text" class="textInput" id="bookSearch" name="bookSearch">
+            <input type="button" id="ok0" value="OK" onclick="findBook('all')">
+            <br><br>
+            <label for="titleSearch">Search Title:</label>
+            <input type="text" class="textInput" id="titleSearch" name="titleSearch">
+            <input type="button" id="ok1" value="OK" onclick="findBook('title')">
+            <br><br>
+            <label for="authorSearch">Search Author:</label>
+            <input type="text" class="textInput" id="authorSearch" name="authorSearch">
+            <input type="button" id="ok2" value="OK" onclick="findBook('author')">
+            <br><br><hr><br>
+            <label for="bookList">Book List:</label>
+            <select id="bookList" name="bookList"><option>--- NIL ---</option></select>
+            <input type="submit" value="GO">    
+        </form>
+    </div>
+  </body>
+</html>
